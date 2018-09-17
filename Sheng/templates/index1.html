@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>圣斗士</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/static/css/fruit.css">
+    <script src="/static/js/jquery-1.11.1.min.js"></script>
+
+<script src="/static/js/unslider.min.js"></script>
+<script src="/static/js/index.js"></script>
+
+<style>
+.banner { position: relative; overflow: auto; text-align: center;}
+
+.banner li { list-style: none; }
+
+.banner ul li { float: left; }
+
+</style>
+</head>
+<body>
+	<!-- 页面模块划分 -->
+	<!-- 1、导航栏 -->
+	<div id="nav">
+		<!-- 右侧导航 -->
+		<ul class="nav_right">
+			<li>
+				<a href="/login">[ 登录 ] </a>
+			</li>
+			<li>
+				<b></b>
+				<a href="/register">[ 注册 ] </a>
+			</li>
+			<li>
+				<b></b>
+				<a href="#">券卡兑换</a>
+			</li>
+			<li>
+				<b></b>
+				<a href="#">手机果园</a>
+			</li>
+		</ul>
+		<!-- 左侧导航 -->
+		<ol class="nav_left">
+			<li class="firstLi">
+				北京
+				<u></u>
+				<ul class="select">
+					<li>上海</li>
+					<li>广州</li>
+					<li>深圳</li>
+				</ul>
+			</li>
+			<li>
+				<a href="/top_10/">人气排行</a>
+			</li>
+			<li>
+				<a href="#">讨论贴</a>
+			</li>
+		</ol>
+	</div>
+
+	<!-- 2、轮播图 -->
+<style>
+
+	/*#b04 { width: 640px;}*/
+
+	#b04 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+
+	#b04 .dots li
+
+	{
+
+		display: inline-block;
+
+		width: 10px;
+
+		height: 10px;
+
+		margin: 0 4px;
+
+		text-indent: -999em;
+
+		border: 2px solid #fff;
+
+		border-radius: 6px;
+
+		cursor: pointer;
+
+		opacity: .4;
+
+		-webkit-transition: background .5s, opacity .5s;
+
+		-moz-transition: background .5s, opacity .5s;
+
+		transition: background .5s, opacity .5s;
+
+	}
+
+	#b04 .dots li.active
+
+	{
+
+		background: #fff;
+
+		opacity: 1;
+
+	}
+
+	#b04 .arrow { position: absolute; top: 200px;}
+
+	#b04 #al { left: 15px;}
+
+	#b04 #ar { right: 15px;}
+
+</style>
+
+
+
+<div class="banner" id="b04">
+
+    <ul>
+
+        <li><img src="/static/img/01.jpg" alt="" width="640" height="480" ></li>
+
+        <li><img src="/static/img/02.jpg" alt="" width="640" height="480" ></li>
+
+        <li><img src="/static/img/03.jpg" alt="" width="640" height="480" ></li>
+
+        <li><img src="/static/img/04.jpg" alt="" width="640" height="480" ></li>
+
+        <li><img src="/static/img/05.jpg" alt="" width="640" height="480" ></li>
+
+    </ul>
+
+    <a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow" id="al" src="/static/img/arrowl.png" alt="prev" width="20" height="35"></a>
+
+    <a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow" id="ar" src="/static/img/arrowr.png" alt="next" width="20" height="37"></a>
+
+</div>
+
+
+
+<script>
+
+	$(document).ready(function(e) {
+
+	    var unslider04 = $('#b04').unslider({
+
+			dots: true
+
+		}),
+
+		data04 = unslider04.data('unslider');
+
+
+
+		$('.unslider-arrow04').click(function() {
+
+	        var fn = this.className.split(' ')[1];
+
+	        data04[fn]();
+
+	    });
+
+	});
+
+</script>
+
+	<!-- 3、小图推荐 -->
+	<!-- <div id='commend'>
+		<img src="g1.jpg">
+		<img src="g2.jpg">
+		<img src="g3.jpg">
+		<img src="g4.jpg" class="lastImg">
+	</div> -->
+
+	<!-- 4、商品信息展示 -->
+	<div id="main">
+		<p>
+			<a href="#">更多</a>
+			<img src="/static/img/t4.png">
+		</p>
+		<div class="item" id="sheng01">
+			<div class="proImg">
+				<img src="/static/img/jialong.png">
+			</div>
+		<p>
+			黄金圣斗士
+			<img src="/static/img/cart.png">
+		</p>
+		<span><a href="star.html">双子座：加隆</a></span>
+		</div>
+	</div>
+</body>
+</html>
